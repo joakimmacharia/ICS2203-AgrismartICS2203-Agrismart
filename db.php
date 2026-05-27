@@ -1,14 +1,16 @@
 <?php
 
-$conn = mysqli_connect(
-    "localhost",
-    "root",
-    "",
-    "agrismart_db"
-);
+$host = "localhost";
+$user = "root";
+$password = "";
+$database = "agrismart_db";
 
-if(!$conn){
+$conn = mysqli_connect($host, $user, $password, $database);
+
+if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
+
+mysqli_set_charset($conn, "utf8mb4");
 
 ?>
